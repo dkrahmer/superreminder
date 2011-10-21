@@ -12,8 +12,6 @@ namespace SuperReminder
     {
         public static readonly DependencyProperty TimeProperty = DependencyProperty.Register("Time", typeof (DateTime),
                                                                                              typeof (Countdown));
-        private DateTime _time;
-
         public Countdown()
         {
             InitializeComponent();
@@ -25,11 +23,13 @@ namespace SuperReminder
 
         public DateTime Time
         {
-            get { return _time; }
+            get
+            {
+                return (DateTime)GetValue(TimeProperty);
+            }
             set
             {
-                _time = value;
-                UpdateTime();
+                SetValue(TimeProperty, value);
             }
         }
 
@@ -43,7 +43,7 @@ namespace SuperReminder
             var timeLeft = new TimeSpan(0);
             if (Time > DateTime.Now)
                 timeLeft = Time - DateTime.Now;
-            TimeLeftTextBlock.Text = String.Format("{0:00}:{1:00}", timeLeft.TotalHours, timeLeft.Seconds);
+            TimeLeftTextBlock.Text = String.Format("{0:00}:{1:00}", Math.Truncate(timeLeft.TotalMinutes), timeLeft.Seconds);
         }
     }
 }
