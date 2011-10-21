@@ -1,0 +1,76 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:SuperReminder.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        xmlns:c="clr-namespace:SuperReminder" x:Class="SuperReminder.ReminderWindow" Title="Super Reminder" Height="768"
+        Width="1024" Closing="ReminderWindowFormClosing" Topmost="True">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StyleResources.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+
+
+      <DataTemplate x:Key="ReminderInfoTemplate">
+        <StackPanel>
+          <Grid>
+            <Grid.Width>
+              <Binding Path="ActualWidth"
+                       RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollContentPresenter}}" />
+            </Grid.Width>
+            <Grid.RowDefinitions>
+              <RowDefinition></RowDefinition>
+              <RowDefinition></RowDefinition>
+              <RowDefinition></RowDefinition>
+              <RowDefinition></RowDefinition>
+              <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="120"></ColumnDefinition>
+              <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Subject}"
+                       Style="{DynamicResource SubjectStyle}" />
+            <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Text="{Binding Location}"
+                       Style="{DynamicResource LocationStyle}" />
+            <TextBlock TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Text="{Binding StartTime}" />
+            <TextBlock TextWrapping="Wrap" Grid.Row="3" Grid.Column="1" Text="{Binding Duration}" />
+            <TextBlock TextWrapping="Wrap" Grid.Row="4" Grid.Column="1" Text="{Binding Body}" />
+            <c:Countdown Grid.Row="1" Grid.Column="0" Grid.RowSpan="4" Padding="0, 0, 5, 0" Time="{Binding StartTime}" ></c:Countdown>
+          </Grid>
+          <Grid>
+            <Grid.Width>
+              <Binding Path="ActualWidth"
+                       RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type ScrollContentPresenter}}" />
+            </Grid.Width>
+            <Grid.RowDefinitions>
+              <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="50*"></ColumnDefinition>
+              <ColumnDefinition Width="50*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource GlassButton}" Click="SnoozeClick">Snooze 3 Min Before</Button>
+            <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource GlassButton}" Click="DismissClick">Dismiss</Button>
+
+          </Grid>
+        </StackPanel>
+      </DataTemplate>
+      <Style x:Key="SubjectStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="28" />
+      </Style>
+      <Style x:Key="LocationStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="18" />
+      </Style>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.DataContext>
+    <vm:ReminderWindowViewModel />
+  </Window.DataContext>
+  <StackPanel d:DataContext="{d:DesignData /SampleData/ReminderWindowViewModelSampleData.xaml}">
+    <ItemsControl ItemsSource="{Binding Reminders}" ItemTemplate="{DynamicResource ReminderInfoTemplate}"
+                  HorizontalContentAlignment="Stretch" />
+  </StackPanel>
+</Window>

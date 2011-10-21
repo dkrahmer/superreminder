@@ -1,0 +1,55 @@
+﻿<SuperReminder_ViewModels:ReminderWindowViewModel xmlns:SuperReminder_ViewModels="clr-namespace:SuperReminder.ViewModels" xmlns:SuperReminder="clr-namespace:SuperReminder" xmlns:System="clr-namespace:System;assembly=mscorlib"
+                                                  xmlns:Models="clr-namespace:SuperReminder.Models">
+	<SuperReminder_ViewModels:ReminderWindowViewModel.Reminders>
+		<Models:ReminderInfo Body="Cras aliquam nam integer class duis aenean nunc amet maecenas mauris curae donec etiam praesent accumsan quisque ante fusce arcu vivamus bibendum dictumst diam aliquam aliquet nullam sed eleifend lorem dis facilisi faucibus blandit eget est" Location="Curabitur phasellus nam mauris" Subject="Nullam sed vestibulum" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Commodo conubia habitant morbi hac leo aptent auctor inceptos congue cursus cubilia elit dapibus mus interdum nulla proin augue enim egestas euismod nec feugiat gravida dictum dolor iaculis" Location="Consequat dictumst aliquam donec etiam" Subject="Fusce duis lorem nunc" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Lacinia laoreet fames natoque erat posuere non lobortis eros per nibh lectus nisi nisl felis sed nunc potenti pretium sem odio orci ipsum" Location="Quisque dignissim parturient" Subject="Vestibulum elementum facilisis morbi eleifend" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Justo pede sit quam nascetur libero quis ligula litora rhoncus pharetra sodales vel nam viverra luctus lacus aliquam urna magnis lorem cras integer placerat magna duis sed mattis dis quisque nunc massa mauris amet est metus hac mollis leo ante" Location="Fermentum vivamus est aliquam" Subject="Aliquet lectus nulla amet blandit" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Mus morbi vivamus aliquam neque montes arcu pulvinar netus nec nulla porta non nostra per diam ornare sed aliquet blandit platea commodo" Location="Arcu facilisi diam leo" Subject="Commodo habitasse hendrerit proin vestibulum" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Primis conubia purus risus sem cubilia sit eget velit sagittis rutrum senectus sapien sociosqu semper suscipit vitae torquent ultrices vel nam vehicula class volutpat curae maecenas" Location="Eget nec" Subject="Imperdiet malesuada libero non augue" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Sed dapibus praesent dis egestas donec sociis etiam accumsan bibendum elit est fusce taciti dictumst hac euismod lorem eleifend enim leo erat feugiat tellus tempor facilisi gravida tempus tortor iaculis morbi turpis mus eros lacinia nulla" Location="Adipiscing cubilia dapibus enim egestas" Subject="Parturient sed erat" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Proin augue nec non nibh nisi per varius laoreet dolor fames felis nisl sed sem faucibus sit vel habitant inceptos interdum ipsum justo lobortis natoque nam posuere nunc lacus" Location="Inceptos interdum eros" Subject="Euismod nibh sem lobortis" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Potenti nascetur odio pretium lorem rhoncus magna massa sodales pharetra viverra orci sed placerat pede metus quam morbi neque aenean mauris nullam pulvinar quis" Location="Placerat feugiat" Subject="Luctus gravida pulvinar magnis tincidunt" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+		<Models:ReminderInfo Body="Aliquam netus sagittis senectus dis urna cras nulla sociosqu duis suscipit porta nunc aptent integer amet quisque purus ante arcu" Location="Vestibulum nisi vel sagittis" Subject="Tristique nam ultricies venenatis sed" StartTime="10/19/2011 09:57:56">
+			<Models:ReminderInfo.Duration>
+				<System:TimeSpan/>
+			</Models:ReminderInfo.Duration>
+		</Models:ReminderInfo>
+	</SuperReminder_ViewModels:ReminderWindowViewModel.Reminders>
+</SuperReminder_ViewModels:ReminderWindowViewModel>
