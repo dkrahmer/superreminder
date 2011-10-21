@@ -66,16 +66,22 @@ namespace SuperReminder
         {
             reminder.SnoozeBefore(3);
             _viewModel.Reminders.Remove(reminder);
+            CloseWindowsIfThereAreNoReminders();
         }
 
         public void DismissReminder(ReminderInfo reminder)
         {
             reminder.Dismiss();
             _viewModel.Reminders.Remove(reminder);
+            CloseWindowsIfThereAreNoReminders();
+        }
+
+        private void CloseWindowsIfThereAreNoReminders()
+        {
             if (_viewModel.Reminders.Count() == 0)
             {
                 var window = _contexts.First().Window;
-                if(window != null)
+                if (window != null)
                     window.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(window.Close));
             }
         }
@@ -98,7 +104,11 @@ namespace SuperReminder
                 }
                 context.Window.DataContext = _viewModel;
                 context.Window.Show();
-                context.Window.Closed += (sender2, e2) => context.Window.Dispatcher.InvokeShutdown();
+                context.Window.Closed += (sender2, e2) =>
+                                             {
+                                                 context.Window.Dispatcher.InvokeShutdown();
+                                                 _contexts.Remove(context);
+                                             };
                 context.IsReady.Set();
                 Dispatcher.Run();
             }

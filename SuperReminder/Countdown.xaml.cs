@@ -20,7 +20,6 @@ namespace SuperReminder
             var timer = new DispatcherTimer {Interval = new TimeSpan(0, 0, 1)};
             timer.Tick += TimerTick;
             timer.Start();
-            _time = DateTime.Now + TimeSpan.FromMinutes(64);
             UpdateTime();
         }
 

@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         xmlns:c="clr-namespace:SuperReminder" x:Class="SuperReminder.ReminderWindow" Title="Super Reminder" Height="768"
-        Width="1024" Closing="ReminderWindowFormClosing" Topmost="True">
+        Width="1024" Closing="ReminderWindowFormClosing" Topmost="False">
   <Window.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
