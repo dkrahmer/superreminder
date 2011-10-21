@@ -47,6 +47,7 @@ namespace SuperReminder
 
         private void CreateContexts()
         {
+            ReminderWindow.ResetIsClosing();
             Screen[] screens = Screen.AllScreens;
             foreach (var screen in screens)
             {

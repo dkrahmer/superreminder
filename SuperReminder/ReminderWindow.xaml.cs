@@ -27,6 +27,11 @@ namespace SuperReminder
         private static event ClossAllHandler CloseAll;
         private volatile static bool _isClossing;
 
+        public static void ResetIsClosing()
+        {
+            _isClossing = false;
+        }
+
         private void ReminderWindowCloseAll(object sender, EventArgs args)
         {
             if (sender != this)
