@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSuperReminder", "SetupSuperReminder\SetupSuperReminder.vdproj", "{2EEAED35-BD21-417F-86E5-F1957469C354}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SuperReminder.vsmdi
@@ -29,6 +31,8 @@ Global
 		{42E92CF9-22D9-4F78-85D7-8DE0CAB53245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E92CF9-22D9-4F78-85D7-8DE0CAB53245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E92CF9-22D9-4F78-85D7-8DE0CAB53245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEAED35-BD21-417F-86E5-F1957469C354}.Debug|Any CPU.ActiveCfg = Debug
+		{2EEAED35-BD21-417F-86E5-F1957469C354}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
