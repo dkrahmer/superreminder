@@ -36,7 +36,7 @@
             <TextBlock TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Text="{Binding StartTime}" />
             <TextBlock TextWrapping="Wrap" Grid.Row="3" Grid.Column="1" Text="{Binding Duration}" />
             <TextBlock TextWrapping="Wrap" Grid.Row="4" Grid.Column="1" Text="{Binding Body}" />
-            <c:Countdown Grid.Row="1" Grid.Column="0" Grid.RowSpan="4" Padding="0, 0, 5, 0" Time="{Binding StartTime}" ></c:Countdown>
+            <c:Countdown Grid.Row="1" Grid.Column="0" Grid.RowSpan="4" Padding="0, 0, 5, 0" Time="{Binding StartTime}" VerticalAlignment="Top"></c:Countdown>
           </Grid>
           <Grid>
             <Grid.Width>
@@ -69,8 +69,10 @@
   <Window.DataContext>
     <vm:ReminderWindowViewModel />
   </Window.DataContext>
-  <StackPanel d:DataContext="{d:DesignData /SampleData/ReminderWindowViewModelSampleData.xaml}">
-    <ItemsControl ItemsSource="{Binding Reminders}" ItemTemplate="{DynamicResource ReminderInfoTemplate}"
+    <ScrollViewer>
+        <StackPanel d:DataContext="{d:DesignData /SampleData/ReminderWindowViewModelSampleData.xaml}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <ItemsControl ItemsSource="{Binding Reminders}" ItemTemplate="{DynamicResource ReminderInfoTemplate}"
                   HorizontalContentAlignment="Stretch" />
-  </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
 </Window>
