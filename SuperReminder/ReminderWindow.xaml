@@ -50,7 +50,7 @@
               <ColumnDefinition Width="50*"></ColumnDefinition>
               <ColumnDefinition Width="50*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource GlassButton}" Click="SnoozeClick">Snooze 3 Min Before</Button>
+            <Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource GlassButton}" Click="SnoozeClick">Snooze 1 Min Before</Button>
             <Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource GlassButton}" Click="DismissClick">Dismiss</Button>
 
           </Grid>

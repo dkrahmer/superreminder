@@ -65,7 +65,7 @@ namespace SuperReminder
 
         public void SnoozeReminder(ReminderInfo reminder)
         {
-            reminder.SnoozeBefore(3);
+            reminder.SnoozeBefore(1);
             _viewModel.Reminders.Remove(reminder);
             CloseWindowsIfThereAreNoReminders();
         }
