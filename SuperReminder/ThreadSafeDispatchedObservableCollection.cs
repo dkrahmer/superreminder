@@ -92,7 +92,5 @@ namespace SuperReminder
             }
             OnCollectionChange(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, item, oldIndex));
         }
-
-
     }
 }
