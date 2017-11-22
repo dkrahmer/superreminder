@@ -59,6 +59,16 @@ namespace SuperReminder
 			Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => _viewModel.Reminders.Remove(reminder)));
 		}
 
+		private void Snooze0Click(object sender, RoutedEventArgs e)
+		{
+			var reminder = ((Button)sender).DataContext as ReminderInfo;
+			if (reminder == null)
+				throw new Exception("Bad data context");
+
+			// TODO: Snooze the reminder and remove it from all the windows
+			_reminderDispatcher.SnoozeReminder(reminder, 0);
+		}
+
 		private void Snooze1Click(object sender, RoutedEventArgs e)
 		{
 			var reminder = ((Button)sender).DataContext as ReminderInfo;

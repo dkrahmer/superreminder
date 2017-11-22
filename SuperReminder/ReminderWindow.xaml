@@ -54,7 +54,7 @@
 							<ColumnDefinition Width="15*"></ColumnDefinition>
 						</Grid.ColumnDefinitions>
 						<TextBlock TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Text="Snooze: " Style="{DynamicResource SubjectStyle}"/>
-						<Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource GlassButton}" Click="Snooze1Click">1 min before</Button>
+						<Button Grid.Row="0" Grid.Column="1" Style="{DynamicResource GlassButton}" Click="Snooze0Click">0 min before</Button>
 						<Button Grid.Row="0" Grid.Column="2" Style="{DynamicResource GlassButton}" Click="Snooze3Click">3 min before</Button>
 						<Button Grid.Row="0" Grid.Column="3" Style="{DynamicResource GlassButton}" Click="Snooze5Click">5 min before</Button>
 						<Button Grid.Row="0" Grid.Column="4" Style="{DynamicResource GlassButton}" Click="Snooze10Click">10 min before</Button>
